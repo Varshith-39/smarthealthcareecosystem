@@ -1,0 +1,18 @@
+{
+  "name": "smart-healthcare-ecosystem",
+  "version": "1.0.0",
+  "description": "Smart Healthcare Ecosystem - Connected Healthcare, Patient Monitoring, AI Risk Prediction, and Doctor Consultation",
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "seed": "cd server && npm run seed",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently --kill-others-on-fail -n \"SERVER,CLIENT\" -c \"cyan.bold,green.bold\" \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "start": "cd server && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "author": "B.Tech Final Year Major Project",
+  "license": "MIT"
+}

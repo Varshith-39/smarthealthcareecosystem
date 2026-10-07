@@ -1,0 +1,17 @@
+{
+  "name": "smart-healthcare-ecosystem-root",
+  "version": "1.0.0",
+  "description": "Smart Healthcare Ecosystem with Python FastAPI AI Microservice, Node.js Backend, and React Frontend",
+  "scripts": {
+    "backend": "cd backend && npm run dev",
+    "ai-service": "cd ai-service && .\\venv\\Scripts\\uvicorn app.main:app --reload --port 8000",
+    "frontend": "cd frontend/client && npm run dev",
+    "seed": "cd backend && npm run seed",
+    "dev:all": "concurrently --kill-others-on-fail -n \"BACKEND,AI-SERVICE,FRONTEND\" -c \"cyan.bold,magenta.bold,green.bold\" \"npm run backend\" \"npm run ai-service\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "author": "B.Tech Final Year Major Project",
+  "license": "MIT"
+}
